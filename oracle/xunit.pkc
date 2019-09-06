@@ -1,0 +1,9 @@
+whenever sqlerror exit failure rollback
+whenever oserror exit failure rollback
+
+@@xunit.pks
+show errors
+
+@@xunit.pkb
+show errors
+

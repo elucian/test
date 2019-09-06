@@ -1,0 +1,10 @@
+it's not ABCDh, it's 'ABCD'h.
+Here's my recommendations, if you want a systems programming language, but still have it be a learning project:
+1. drop the indentation sensitivity. It has no place in a systems programming language, because you want to be absolutely sure what is in which block. Furthermore, sometimes, I want to indent logical pieces of code (e.g. stuff between glBegin/glEnd), and I can't with that.
+2. you need a statement terminator and separator. I don't want to run into bugs just because I thought a statement had ended, but it had actually continued to the next like, JS-like.
+3. forget about avoiding overloading of operators. Just do it C-like. If it's good enough for Rust, a modern language obsessed with safety, it's good enough for this. Besides, you want few keywords and a familiar language --- which means you need familiar operators, and you need to overload to avoid a slew of keywords
+#1 means a simpler lexer, and avoiding issues with indentation-sensitivitiy. Also, you'll need a lot of compromises if you have indentation-sensitivity (there's a bunch of stuff Python couldn't do, e.g. multi-line lambdas, just because of this). Doesn't mean you need C-like braces, mind you (e.g. you could do ALGOL-style instead of C-style)
+#2 avoids the shit-ton of issues with newlines (and believe me, newline-sensitivity complicates the lexer a lot ... it's not a simple thing to do, and it gets error-prone)
+#3 ensures that people don't need to be confused about the very language they're trying to implement (again, if it's for learning) or use (if it's for using). One less thing to learn about.
+Mind you, you can still have a new language that doesn't look much like C if you follow the above rules (except maybe #3, but really, everyone uses those ops, so ...)
+e.g. you could do this instead of indentation; I've even added some convenient comparison syntax in, for good measure:

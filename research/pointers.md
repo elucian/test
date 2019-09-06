@@ -1,0 +1,1 @@
+A pointer stores the address of a variable. Therefore, the memory space required for a pointer depends on the address width of that computer. If you have a 32-bit processor, a pointer will occupy 32 bits or 4 bytes. If you have a 64 bit computer, it will occupy 64 bits or 8 bytes.

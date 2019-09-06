@@ -1,0 +1,51 @@
+--------------------------------
+XUNIT TEST
+--------------------------------
+X-Unit test is a special test created for PL/SQL procedures.
+
+The unit test is a package with some conventions:
+
+a) Must start with prefix TEST_*
+b) Must have a procedure init
+c) Must have a procedure teardown
+d) Must have one or more procedures check_*
+
+Check procedures must be independent from each other.
+Each test unit pass if all check procedures pass and fail otherwise.
+If one check fail, test does not strop and continue to next check.
+The order of execution of check procedure is random.
+
+Run a test case
+---------------
+The test case can be run using the package: XUNIT.RUN(<package_name>)
+To run all installed test case you can run XUNIT.RUN() with no parameters.
+The procedure RUN return a result 0 if pass and > 1 if it fails.
+
+
+Writing a test case
+-------------------
+There is a sample package provided as an example: TEST_SAMPLE
+Procedures init, teardown and check* do not have parameters.
+
+Procedure init will create the fixture data for all the tests in a test unit.
+Procedure teardown will remove the fixture data.
+
+Procedure check, must use xunit.assert() procedure to report the errors.
+You must use assert at least once in each check procedure.
+
+The check procedure is very easy to create:
+
+Example.
+----------------------------------------------------
+procedure check_my_check is;
+   dummy integer;
+begin
+   select count(*) into dummy from dual; 	  
+   assert(dummy=1,'Wrong number of records in table dual, expected 1 found '||dummy);
+end;
+----------------------------------------------------
+
+To use this kind of test, you must install XUNIT utility package.
+
+Files: xunit.pkb, xunit.pks
+

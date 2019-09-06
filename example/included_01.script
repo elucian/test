@@ -1,0 +1,16 @@
+test:included_01
+  description = "this is a child test script"
+  when_fail = next
+  when_pass = next
+
+case:child_log
+   keyword = log
+   severity= info
+   message = "Info message"
+
+case:child_shell
+   keyword= shell
+   command= bin\hello.bat
+   params ="this is a child test script"
+
+end:included_01

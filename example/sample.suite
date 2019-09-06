@@ -1,0 +1,125 @@
+#----------------------------------------------------------------------
+# This file is a sample test script used for testing the PTA
+# For more information about test scripts, read sample/doc/how2script.txt
+#----------------------------------------------------------------------
+test:sample
+  description = "This is a sample test suite"
+  when_pass   = next
+  when_fail   = next
+  severity    = major
+  
+#----------------------------------------------------------------------------
+# Variables can be used in test scripts using ${variable} notation
+# Predefined available are uppercase reserved and take values automatically
+# Uppercase variables are inherited in the included scripts and take precedence
+#----------------------------------------------------------------------------
+# PIPELINE_HOME = default value is read from environment variable
+# ANT_HOME      = predefined variable read from environment variable
+# START_TIME    = formated string automaticaly created at runtime
+# TEST_NAME     = name of the test script specified using test: category
+# TEST_CODE     = code of the test suite specified in case: 
+# NODE_NAME       = network computer name
+# USER_NAME       = current user name
+#----------------------------------------------------------------------------
+# mandatory variables used in the PTA framework internal keywords
+#----------------------------------------------------------------------------
+# RUNTIME_FOLDER  = the OS runtime folder from where the shell commands are running
+# BIN_FOLDER      = the path where files for keyword "run" and "ant" are located
+# OUTPUT_FOLDER   = folder where reports and logs are created
+# SCRIPT_FOLDER   = folder where test scripts are located
+# LOG_FILE        = log path and file name must be specified
+# REPORT_FILE     = test result report in CSV format
+#----------------------------------------------------------------------------
+# optional variables: used in the specialized keywords "ant" and "java"
+#----------------------------------------------------------------------------
+# CONFIG_FILE     = can be provided here, or for every case
+# CLASSPATH       = can be provided here, or for every case
+#----------------------------------------------------------------------------
+variable:
+  RUNTIME_FOLDER   = ${PIPELINE_HOME}\test\example
+  BIN_FOLDER       = ${RUNTIME_FOLDER}
+  CLASSPATH        = ${PIPELINE_HOME}\lib
+  OUTPUT_FOLDER    = ${PIPELINE_HOME}\test\output\${TEST_NAME}\${START_TIME}
+  SCRIPT_FOLDER    = ${RUNTIME_FOLDER}
+  LOG_FILE         = ${OUTPUT_FOLDER}\test.log
+  REPORT_FILE      = ${OUTPUT_FOLDER}\report.csv
+  CONFIG_FILE      = ${RUNTIME_FOLDER}\sample.config
+  ORA_LOGIN        = em_dev_pta/pipeline@mpex4dev
+
+#----------------------------------------------------------------
+# Test cases are starting with case: label
+# Every case has an alfanumeric code and one mandatory keyword
+# Code can contain ascii characters: a-z, A-Z, 0-9 and _
+#----------------------------------------------------------------
+case:log0
+  keyword    =  log
+  type       =  info
+  message    =  "Info message"
+
+case:log2
+  keyword    =  log  
+  status     =  disable
+  type     =  warning
+  message    =  "Warning message"
+
+case:log3 
+  keyword    =  log
+  severity   =  critical
+  message    =  "Critical message"
+
+case:log1
+  keyword    =  log
+  type   =  error
+  message    =  "Error message"
+
+case:shell2
+  keyword    = shell
+  command    = bin\hello.bat
+  params     = "this is a test"
+
+case:shell1
+  keyword    = shell
+  command    = bin\error.bat
+
+case:run
+  keyword    =  run
+  command    =  hello.bat
+
+case:sqlplus
+  keyword    = sqlplus
+  script     = ${RUNTIME_FOLDER}\hello.sql
+  login      = ${ORA_LOGIN}
+
+case:plsql
+  keyword    = plsql
+  procedure  = hello
+  login      = ${ORA_LOGIN}
+  params     = str = "test string" 1
+
+case:xunit
+  keyword    = xunit
+  package    = TEST_SAMPLE
+  login      = ${ORA_LOGIN}
+
+case:spool 
+  keyword    = spool
+  script     = ${RUNTIME_FOLDER}\sample_spool.sql
+  login      = ${ORA_LOGIN}
+
+case:sqlldr
+  keyword    = sqlldr
+  profile    = normal
+  userid     = ${ORA_LOGIN}
+  control    = ${SCRIPT_FOLDER}/sample.ctl
+  data       = ${SCRIPT_FOLDER}/sample.csv
+
+case:scr1
+  keyword  = include
+  script   = included_01.script
+
+case:scr2
+  keyword  = include
+  script   = included_02.script
+
+
+end:sample

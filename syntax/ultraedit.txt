@@ -1,0 +1,30 @@
+/L20"Test Script" Nocase Line Comment = # Line Comment Preceding Chars = [~0-9A-Za-z_] String Chars = " File Extensions = script suite
+/Block Comment On = ; 
+/Delimiters = !"%&'()*+,/:;<=>?@^{|}~$[]
+/C1 "Separators"
+,
+=
+:
+/C2"Region" STYLE_KEYWORD
+test
+end
+variable
+case
+/C3"Keyword" STYLE_KEYWORD
+next
+exit
+enable
+disable
+include
+/C4"Argument" STYLE_KEYWORD
+keyword
+description
+when_pass
+when_fail
+script
+status
+login
+target
+params
+procedure
+package

@@ -1,0 +1,21 @@
+#SpaceAda:
+In rust with LLVM:
+https://github.com/NorthSailor/SpaceAda/tree/master/src
+----------------------------------------------------------------
+
+#ada-compiler
+In python:
+https://github.com/ayusek/ada-compiler
+
+----------------------------------------------------------------
+
+#mini-ada
+In OCaml
+https://github.com/xuedong/mini-ada
+
+
+#Assembly book
+https://github.com/Captainarash/The_Holy_Book_of_X86
+
+#Windows console documentation
+https://devblogs.microsoft.com/commandline/windows-command-line-inside-the-windows-console/

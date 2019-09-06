@@ -1,0 +1,31 @@
+# Verify PTA framework
+test:included_02
+  description = "this is a child test script"
+  when_fail = exit
+  when_pass = next
+
+variable:
+  CONFIG_FILE=${CONFIG_FILE}
+
+
+case:info_log1    
+  keyword =log     
+  severity= info     
+  message = "Config file=${CONFIG_FILE}"
+
+case:info_log2    
+  keyword =log     
+  severity= info     
+  message = "This is a log message from child script"
+
+case:child_log    
+  keyword =log     
+  severity= info     
+  message = "Info message from child script"
+
+case:child_shell  
+  keyword=shell   
+  command= bin\hello.bat 
+  params ="this is a child test script"
+
+end:included_02

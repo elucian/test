@@ -1,0 +1,202 @@
+## Explore Unicode
+
+ASCII Operators: {. , _ - + / * ~ = ^ > < ! ? | @ # $ %  & () {} [] ; : " ' ` \ }
+
+In addition to classic ASCII operators having unicode characters could be a readability advantage.
+However unicode characters are difficult to insert using a regular keyboard, maybe we can map some of them. 
+
+#### Unicode Source Cod 
+Unicode with font selected can be a real advantage for making code beautiful. However it will be impossible to insert strings in other languages then the font is capable to display. Most mathematical fonts are:
+
+.math {font-family: "Unicode Symbols", "Times New Roman", "Apple Symbols","Arial Unicode MS"}
+
+
+#### DejaVu Sans Mono
+
+This font is very suitable for math formula representations:
+Has also special notation for set of numbers: 
+ℤ ℕ ℂ ℙ ℚ ℍ ℝ
+↣ ↢ ↡ ↠ ↟ ↞  ‰ ‱ ⋜ ⋝ ⊇ ⊅ ⊄ ⊃ ⊂ ≇ ≃ ∬ ∭ 
+∡ ∢ ∦ ∥ ∧ ∨  ∪ ∅ ∼ ∽ ∾ ∿ ≀ ≁ ≂ ≄ ≅ ≉ ≊ ≢ ≦ ≧ ≨ ≩  ≪ ≫
+∗ ∘ ∛ ∜ ∝ ˣ ʰ «  
+A ⁽⁾⁺⁻⁼·⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ 
+A ₍₎₋₊₌.‚₀₁₂₃₄₅₆₇₈₉‹›
+A ᵃᵇᶜᵈᵉᶠᶢʰⁱʲᵏᶩᵐⁿᵒᵖʳˢᶳᵗᶵᵘᵛˣʸᶻ ʷᶷᶾ ʱʴˠ
+A ᴬᴮᴰᴱᴲᴳᵸᴵᴶᴷᴸᴹᴺᴻᴼᴾᴿᵁᵂᵀ 
+A ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓₔ
+A ᵐⁿ
+
+Zodiac: 
+♈ ♋ ♉ ♊ ♌ ♍ ♏ ♐ ♒ ♑ ♓ ♎ ♀ ♂
+⚀ ⚁ ⚂ ⚃ ⚄ ⚅
+❨❩❪❫❬❭❮❯❰❱❲❳❴❵ (){}[]<>
+
+X …  
+
+
+    A   B   C   D   E   F   G   H
+  ╔═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╗
+ 8║ ♖ │ ♘ │ ♗ │ ♔ │ ♕ │ ♗ │ ♘ │ ♖ ║8
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 7║ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ │ ♙ ║7
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 6║   │   │   │   │   │   │   │   ║6
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 5║   │   │   │   │   │   │   │   ║5
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 4║   │   │   │   │   │   │   │   ║4
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 3║   │   │   │   │   │   │   │   ║3
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 2║ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ │ ♟ ║2
+  ╟───┼───┼───┼───┼───┼───┼───┼───╢ 
+ 1║ ♜ │ ♞ │ ♝ │ ♚ │ ♛ │ ♝ │ ♞ │ ♜ ║1
+  ╚═══╧═══╧═══╧═══╧═══╧═══╧═══╧═══╝ 
+    A   B   C   D   E   F   G   H
+
+ 
+✡✢✣✤✥✦✬✭✮✯✱✲✳✴✵✶✷✸✹✺
+✻✼✽✾✿❀❂❃❄❅❆❇❈❉
+❨❩❮❯❰❱❲❴❵
+ȘșȚțț
+
+Most useful: 
+-----------
+± × ÷ √ 
+≠ ≈ ≤ ≥ 
+¬ ∨ ∧
+∈ ∉ 
+∩ ∪ ≡ ⊂ ⊃ ⊄ ⊅ ⊆ ⊇ ⊊
+∃ ∄ ∀ ∁ ∄ 
+∆ ∏ ∑ ∫ ∂
+∙ ∞ ∅ 
+∟ ∠ ⊥ ǁ
+„ “  ” ’ ‘ … ¨
+α β γ δ η a 
+π = 180°
+
+
+∡ ∢ ∦ ∥
+Missing: U+2225 (∥) and U+2226 (∦)
+
+
+Intresting:
+-----------
+Nª ⁻ º ¹ ² ³ ⁿ % ¼ ½ ¾ ⅛ ⅜ ⅝ ⅞ 
+⇒ ⇨ ⇧ ⇦ ∴ ∵ ∶ ∷ ∸ ∹ ∺ ∻
+≭ ≮ ≯ ≰ ≱ ≲ ≳⊏ ⊐ ⊑ ⊒ 
+⊕ ⊖ ⊗ ⊘ ⊙ ⊚ ⊞ ⊟  ⊠  ⊡ 
+⋆
+⌈ ⌉ ⌊ ⌋ ⌠ ⌡ ⌢ ⌣ ┌
+═ ║ ╒ ╓ ╔ ╕ ╖ ╗╘ ╙ ╚╛ ╜ ╝
+♪ ♫ ♭ ♮ ♯ ♀ ♂ ♂ ▥ ▦ ▧ ▨ ▩
+
+Europe accent characters: 
+Ăă Ââ Şş Ţţ ë à á ó ô
+
+” “ „ ’ ‘ … ¨
+Aº ¹ ² ³ ª ⁿ ® °
+% ½ ¼ ¾ ⅛ ⅜ ⅝ ⅞ ‰ 
+≤ ≥ ≡ ≠ ≈ ‹ › « » · × ÷ ± √ ∩ Ø § ¬ ⌐ − ∙ ∞ ∫ 
+≤ ≥ ≡ ≠ ≈ ‹ › « » · − ∗ × ÷ ± √ ∕ ∩ Ø § ¬ ⌐ ⌙ ∙ ∞ ∫ 
+
+← → ↔ ↕ ↨ ¶ ⌂ ♀ ♂ ∟ ¡ ¿ ¦ ‼
+☺ ☼ ♀ ♂ ‡ † ¤ ¥ £ µ § ©
+Λ ∧ ∑ ∏ α β γ δ η ∂ λ μ ξ δ β Ω θ ε Ξ π φ ψ ω Ω
+├ ┤ ┬ ┴ ┼ ═ ║ ╒ ╓ ╔ ╕ ╖ ╗ ╘ ╙ ╚ ╛ ╠ ╬ ╧ 
+♠ ♣ ♥ ♦ ♪ ♫ ▬ ▲ ► ▼ ◄ ◊ ○ ◙ ░ ▒ ▓
+├ ┤ ┬ ┴ ┼ ═ ║ ╒ ╓ ╔ ╕ ╖ ╗ ╘ ╙ ╚ ╛ ╠ ╬ ╧ 
+∁ ∃ ∀ ∆ ∈ ∉ ∏ ∑ ∧ ∩ ∪ ≡
+
+Example of ussage:
+╔═════╗
+║Hello║ 
+╚═════╝
+
+1½ = 1.5
+1¼ = 1.25
+4  × 4 = 16
+8  ÷ 4 = 2
+8  ± 3 = (5,11)  
+10 < 11 | 10 > 11
+10 ≤ 11 | 10 <= 11
+10 ≥ 11 | 10 >= 11 
+50 ≠ 60 | 50 ~ 60 
+A ≡ B   | A == B
+A ∩ B   | A && B
+A - B   | A -- B
+A ∪ B   | A || B
+ 
+2² = 4
+2³ = 8
+2ⁿ = 2×2…
+
+4ⁿ = 4 ^ n = 4×4…
+√4    = 2
+√(4²) = 4
+
+∑¹¨ⁿ(X) = 1+2+…n
+∑ A = A[0] + A[1]+…A[n]
+∏ A = A[0] × A[1]×…A[n]
+
+∃!{n ∈ ℕ | (n-n/2)=0}
+
+ℤ ℕ ℚ ℝ ℍ ℂ ℙ   
+
+c:∅
+if a ∈ ℤ[4..8] and c = ∅ then 
+   print("c is empty");
+end if;   
+
+∑ i = 1 + 2 + ...
+i ∈ ℤ[4..8]
+
+∑ i = 4 + 5 + 6 + 7 + 8
+∑ (i+1) = 5 + 6 + 7 + 8 + 9
+5(1+2) = 5×1+5×2 =15
+∑ i² = 16 + 25 + 36 + 48 + 64
+
+avg(i) = ∑i ÷ (∆i+1)
+mod(a) = (λ a | a ≥ 0, ±a)
+
+for a ∈ ℤ loop
+  a^123 += 1;
+end loop
+
+±2³+1 =-8+1=-7
+
+±a = -1 × a
+
+if (a ∨ b) ∧ ¬(c ∨ d) ∧ (x ≤ 2) then
+  pass;
+end if;
+
+4⁴+2²=A⁰·⁵ × B⁻¹⁹ + a⁻⁶
+
+f(n):3⁻ⁿ
+f(x):3⁻ˣ × x²
+
+
+α = 45°
+β = 30°
+
+α: a ∠ b = 45°
+a ∟ b
+
+∠ ⊥ ∟ π 45°
+α β γ δ η a
+
+if a ⊥ b then
+  pass;  
+end if;
+
+if a || b then
+  α: (a ∠ b);
+  print(α); => 0°
+end if;
+
+% ½ ¼ ¾ ⅛ ⅜ ⅝ ⅞ ‰ 
+
+π/2 = 45°
+a= 3/2 
+b= 3÷2

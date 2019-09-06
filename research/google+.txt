@@ -1,0 +1,63 @@
+## Bugs and Errors:
+
+http://joeduffyblog.com/2016/02/07/the-error-model/
+
+I have decided to make a distinction between the two.
+
+In Level an error can be created using keywords:
+
+* raise  - recoverable exception
+* fail   - recoverable exception
+* panic  - unrecoverable exception
+
+Recoverable errors are record structures. When a program is terminated a report can be created for all the exceptions in the program.
+
+Bugs are created using "panic" and are not recorded in error report. If a program terminate using "panic" the error report can't be created.
+
+
+## Null problem:
+
+https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
+
+Let's have another debate for having Null value into the language. Null is representing the nothingness and is recognized by computer science as hystoricaly bad ideea.
+
+Tony Hoare introduced Null references in ALGOL W back in 1965 “simply because it was so easy to implement”, says Mr. Hoare. He talks about that decision considering it “my billion-dollar mistake”. 
+
+"
+But null is a defacto standard today and with 20 years of professionell SQL coding/designing and Everything imaginable you can throw at a database I've tried it. I know the importance of having the ability to say that this contains no value. Just because the inventor doesn't like it it doesn't mean he was wrong and if you think in terms of Sets and boolean algebra null makes perfect sense."
+
+
+Please explain. Why null value make the perfect sense in boolean algebra?  On the contrary I think it does not.
+
+A Boolean value is either True or False. It can't be "maybe" or anything else. If you use Null values with logic operators you will be in trable becouse Null values are neither true nor false.
+
+If we deal with values between 0 and 1 then we say "probably" and this is fuzy logic.
+
+Dealing with Null values in databases is a little different problem then Null pointers. We are talking about unknown values.
+
+I think databases structures that support Null values have bad design. A designer should create better databases using not null fields.
+
+However we should be pragmatic and find a sollution to this problem when we create drivers for databases.
+
+We will probably define some kind of internal classes that  can map to field data types. With these classes we could support operator "is void" to simulate the Null value. However we must have runtime checks to avoid operations with Null values.
+
+For Level language native data types we can't create the Null value. That is to have an efficient language that can use native OS data types.
+
+In Python we can have the Null value because all values are objects but in a native language we can't.
+
+"
+The right way to do it is having an Optional type -- this is internally a pointer that might be null for Options of pointers, and a dedicated data structure for Options of non-pointers."
+
+
+**Elucian:** Level language declare several number types. Once a variable is defined as number then it has a value. This value can be Zero=0 or another value. Variable can't be used if it is not initialized.
+
+For other data type we define a Zero value. For string the Zero value is the empty string = "". For collections Zero value is the empty set. We can have the tuple unit = (), empty, empty list = [], empty set = {} and the empty map = {:}.
+
+For objects we can have a "void" object predefined. The Void object is an actual address of a valid empty object.
+
+Level is a language for good developers therefore we use pragmatic solutions. However we wish to avoid the one billion mistake.
+
+Unlike C and C++ we will check if an object is initialized before use. If is not initialized and points to "void" then the object can't be used except for initialization.
+
+We can use "is" operator to check if an object "is void" or "is not void". If the object is void we can initialize the object using assign operator ":"
+
