@@ -1,4 +1,4 @@
-# Test Script Runner
+# Pipeline Test Scripts
 
 You can use this program to run test scripts and test suites.
 
