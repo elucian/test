@@ -8,6 +8,7 @@ You can use this program to run test scripts and test suites.
 * cx_Oracle 5.1 (http://cx-oracle.sourceforge.net)
 * Oracle client
 * Jenkins (optional)
+* Test
 
 ## Capability
 
